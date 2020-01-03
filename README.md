@@ -1,9 +1,12 @@
-# Installation
+# Text2Image
+Generate image from text.
+
+## Installation
 ```
 npm i https://github.com/benjifx/text2image
 ```
 
-Example
+## Example
 ```js
 const { Text2Image } = require('text2image')
 const text2image = new Text2Image()
