@@ -42,7 +42,10 @@ class Text2Image {
         this.options = options;
         this.browser = await puppeteer_1.launch();
         this.page = await this.browser.newPage();
-        return;
+        await this.page.setViewport({
+            width: this.options.width,
+            height: this.options.height,
+        });
     }
     async generate(content, path) {
         const { fontSize, color } = this.options;

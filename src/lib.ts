@@ -48,7 +48,10 @@ export class Text2Image {
     this.options = options
     this.browser = await launch()
     this.page = await this.browser.newPage()
-    return
+    await this.page.setViewport({
+      width: this.options.width,
+      height: this.options.height,
+    })
   }
 
   async generate(content: string, path: string) {
